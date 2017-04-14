@@ -107,6 +107,7 @@ class CUDA_build_ext(build_ext):
             # And the following for linking:
             # nvcc --shared -o <file>.dll <file1>.obj <file2>.obj -lcublas
             # This could be done by a NVCCCompiler class for all platforms.
+        print(cmd, search_path, verbose, dry_run)
         spawn(cmd, search_path, verbose, dry_run)
 
 setup(name="cudamat",
